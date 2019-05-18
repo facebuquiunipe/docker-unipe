@@ -6,7 +6,7 @@ Imagem docker para configuração de ambiente Ubuntu com servidor apache rodando
 Para usar a imagem docker
 ---
 1.Baixar a imagem docker no Docker Hub <br> 
-   <code>$ docker pull facebuqui/projetofinal:1.0.0 </code><br>
+<code>   $ docker pull facebuqui/projetofinal:1.0.0 </code><br>
 2.Gerar o container <br>
    $ docker run -d -p 8080:80 --name=facebuqui facebuqui/projetofinal:1.0.0 <br>
 3.Testar a webapp do Haras. Lembrar de mudar o localhost pelo IP se o servidor for remoto. <br>
