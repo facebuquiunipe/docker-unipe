@@ -1,0 +1,549 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  font: normal 1.42vw "Roboto Condensed", sans-serif;
+}
+
+.header {
+  background-color: #3a7833;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  .header_nav {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 0.8%;
+  }
+}
+
+//estilo do menu
+//--------------------------------------
+.menu ul {
+  padding: 0px;
+  margin: 0px;
+  background-color: #3a7833;
+  list-style: none;
+  //font-weight: bold;
+  color: white;
+}
+
+.menu ul li {
+  display: inline;
+  margin-right: 3px;
+}
+
+.menu ul li a {
+  padding-right: 2px;
+  display: inline-block;
+  margin-right: 2px;
+
+  /* visual do link */
+  color: white;
+  text-decoration: none;
+  border-bottom: 3px solid #3a7833;
+  transition: 0.5s;
+}
+
+.menu ul li a:hover {
+  color: rgb(214, 214, 214);
+  border-bottom: 3px solid #ea0000;
+  transition: 0.5s;
+}
+
+//menu dropdown
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  //p:nth-child(n) {border-bottom: 1px solid rgb(206, 205, 205);} //adiciona linhas em todos elementos filho do tipo "p"
+  //p:last-child {border: 0px;} //remove a linha do ultimo elemento filho do tipo "p"
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+//--------------------------------------
+
+//estilo do submenu login
+//--------------------------------------
+/* Full-width inputs */
+.input_login {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.button_login {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+.button_login:hover {
+  opacity: 0.8;
+}
+//--------------------------------------
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input_search {
+  padding: 10px 20px;
+  margin: 8px 0px;
+  display: inline-block;
+  border: 1px solid #59a351;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  &:hover,
+  &:active,
+  &:focus {
+    border: 1px solid #b4b4b4;
+    outline: none; //tirar a linha do active/focus, apenas para chrome
+  }
+}
+
+.button_search {
+  background: white;
+  border: none;
+  cursor: pointer;
+
+  .icon_search_color {
+    color: rgb(105, 105, 105);
+  }
+}
+
+.leiloes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  //justify-content: center;
+  //align-items: center;
+  article:not(:nth-child(3n)) {
+    //acrescenta espacamento direito se NAO for filho multiplo de 3 (ultimos da linha)
+    margin-right: 1%;
+  }
+  .article-leiloes:nth-child(n + 4) {
+    //acrescenta espacamento superior se NAO for os 3 primeiros filhos
+    margin-top: 1%;
+  }
+}
+
+.article-leiloes {
+  //3 articles de leilao por linha, nao coloquei 100% porque tem um espacamento entre eles
+  width: calc(88% / 3);
+  //box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  .sublinhado {
+    text-decoration: underline;
+  }
+  .img {
+    max-width: 100%;
+  }
+  .titulo_leiloes {
+    margin-bottom: 5%;
+    margin-top: 3%;
+  }
+}
+
+.button_ver_mais_participar {
+  background-color: #4caf50;
+  color: white;
+  padding: 2% 7%;
+  //margin: 8px 0;
+  border: 1px solid #4caf50;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    //opacity: 0.8;
+    border: 1px solid #4caf50;
+    background-color: white;
+    color: #4caf50;
+  }
+}
+
+.botoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #ececec;
+  margin-top: 2%;
+}
+
+.footer_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  background-color: #ececec;
+  height: 10vh; //height é definida nessa unidade, % nao funciona
+  .footer_left {
+    max-width: 50%;
+  }
+  .footer_right {
+    max-width: 50%;
+  }
+  .negrito {
+    font-weight: bold;
+  }
+}
+
+//celular resolução 350px
+//fiz esse break point para se adaptar melhor a resolucoes menores de celular
+@media screen and (max-width: 480px) {
+  .header {
+    .header_left {
+      width: 5%;
+    }
+    .header_logo {
+      width: 40%;
+    }
+    .header_nav {
+      width: 50%;
+    }
+    .header_right {
+      width: 5%;
+    }
+  }
+
+  .icon_menu_sandwich {
+    display: block;
+  }
+  .menu_texto {
+    display: none;
+  }
+
+  .footer_right {
+    display: none;
+  }
+
+  .footer_div {
+    .footer_left {
+      max-width: 80%;
+    }
+  }
+
+  .section-busca,
+  .section-leiloes {
+    width: 95%;
+    margin-left: 5%;
+  }
+
+  .busca {
+    width: 100%;
+    margin-top: 2%;
+    .input_search {
+      width: 86.9%;
+    }
+  }
+
+  body {
+    font-size: 3vw;
+  }
+
+  .leiloes {
+    display: flex;
+    flex-direction: column;
+    //flex-wrap: wrap;
+    width: 95%;
+    margin-top: 2%;
+    margin-left: 5%;
+    //justify-content: center;
+    //align-items: center;
+    article:nth-child(n) {
+      //acrescenta espacamento direito em todos os filhos
+      margin-right: 1%;
+    }
+    .article-leiloes:nth-child(n + 2) {
+      //acrescenta espacamento superior se NAO for o primeiro filho
+      margin-top: 2%;
+    }
+  }
+
+  .article-leiloes {
+    width: 80%; //1 article de leilao por linha
+    .img_leiloes {
+      max-width: 100%;
+      margin: 5px;
+    }
+    .titulo_leiloes {
+      margin-bottom: 1%;
+      margin-top: 0%;
+    }
+    .botoes {
+      margin-bottom: 2%;
+      margin-top: 2%;
+    }
+  }
+}
+
+//celular
+@media screen and (min-width: 481px) and (max-width: 576px) {
+  .header {
+    .header_left {
+      width: 5%;
+    }
+    .header_logo {
+      width: 40%;
+    }
+    .header_nav {
+      width: 50%;
+    }
+    .header_right {
+      width: 5%;
+    }
+  }
+
+  .icon_menu_sandwich {
+    display: block;
+  }
+  .menu_texto {
+    display: none;
+  }
+
+  .footer_right {
+    display: none;
+  }
+
+  .footer_div {
+    .footer_left {
+      max-width: 80%;
+    }
+  }
+
+  .section-busca,
+  .section-leiloes {
+    width: 95%;
+    margin-left: 5%;
+  }
+
+  .busca {
+    width: 100%;
+    margin-top: 2%;
+    .input_search {
+      width: 87%;
+    }
+  }
+
+  body {
+    font-size: 2.5vw;
+  }
+
+  .leiloes {
+    display: flex;
+    flex-direction: column;
+    //flex-wrap: wrap;
+    width: 100%;
+    margin-top: 2%;
+    //justify-content: center;
+    //align-items: center;
+    article:nth-child(n) {
+      //acrescenta espacamento direito em todos os filhos
+      margin-right: 1%;
+    }
+    .article-leiloes:nth-child(n + 2) {
+      //acrescenta espacamento superior se NAO for o primeiro filho
+      margin-top: 2%;
+    }
+  }
+
+  .article-leiloes {
+    width: 93%; //1 article de leilao por linha
+    .img_leiloes {
+      max-width: 45%;
+      margin: 3px;
+      float: left;
+    }
+    .titulo_leiloes {
+      margin-bottom: 1%;
+      margin-top: 0%;
+    }
+    .botoes {
+      margin-bottom: 0%;
+      margin-top: 2%;
+    }
+  }
+}
+
+//tablet
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .header {
+    .header_left {
+      width: 5%;
+    }
+    .header_logo {
+      width: 40%;
+    }
+    .header_nav {
+      width: 50%;
+    }
+    .header_right {
+      width: 5%;
+    }
+  }
+
+  .icon_menu_sandwich {
+    display: block;
+  }
+  .menu_texto {
+    display: none;
+  }
+
+  .section-busca,
+  .section-leiloes {
+    width: 95%;
+    margin-left: 5%;
+  }
+
+  .busca {
+    width: 100%;
+    margin-top: 2%;
+    .input_search {
+      width: 90%;
+    }
+  }
+
+  .leiloes {
+    width: 100%;
+    margin-top: 2%;
+  }
+
+  .article-leiloes {
+    //2 articles de leilao por linha, nao coloquei 100% porque tem um espacamento entre eles
+    width: calc(88% / 2);
+  }
+
+  body {
+    font-size: 2vw;
+  }
+
+  .leiloes {
+    article:not(:nth-child(2n)) {
+      //acrescenta espacamento direito se NAO for filho multiplo de 2 (ultimos da linha)
+      margin-right: 1%;
+    }
+    .article-leiloes:nth-child(n + 3) {
+      //acrescenta espacamento superior se NAO for os 2 primeiros filhos
+      margin-top: 1%;
+    }
+  }
+}
+
+//desktop
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .header {
+    .header_left {
+      width: 5%;
+    }
+    .header_logo {
+      width: 40%;
+    }
+    .header_nav {
+      width: 50%;
+    }
+    .header_right {
+      width: 5%;
+    }
+  }
+
+  .section-busca,
+  .section-leiloes {
+    width: 95%;
+    margin-left: 5%;
+  }
+
+  .busca {
+    width: 100%;
+    margin-top: 2%;
+    .input_search {
+      width: 90%;
+    }
+  }
+
+  .leiloes {
+    width: 100%;
+    margin-top: 2%;
+  }
+}
+
+//desktop grandes
+@media screen and (min-width: 1201px) {
+  .header {
+    .header_left {
+      width: 20%;
+    }
+    .header_logo {
+      //width: 25%;
+      width: 450px;
+    }
+    .header_nav {
+      //width: 35%;
+      width: 550px;
+    }
+    .header_right {
+      width: 20%;
+    }
+  }
+
+  .busca {
+    width: 980px;
+    margin-top: 2%;
+    .input_search {
+      width: 90%;
+    }
+  }
+
+  .leiloes {
+    width: 980px;
+    margin-top: 2%;
+  }
+
+  .footer_div {
+    width: 980px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}

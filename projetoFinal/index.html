@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <script src="js/menu_mobile.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/estilo_menu_mobile.css" />
+    <link rel="stylesheet" href="css/estilo.css" />
+    <title>Haras Web</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header_left"></div>
+
+      <div class="header_logo">
+        <img src="img/logo.jpg" alt="Logo do Site" />
+      </div>
+
+      <div class="header_nav">
+        <nav>
+          <!--Menu celular/tablet-->
+          <div class="dropdown-mobile" onclick="mostraMenuMobile()">
+            <i class="fas fa-bars fa-3x icon_menu_sandwich"></i>
+            <div class="dropdown-content-mobile" id="dropdown-content-mobile01">
+              <ul>
+                <li>
+                  <a href="#"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fas fa-horse"></i> Leiloes</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fas fa-key"></i> Login</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fas fa-cogs"></i> Servicos</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fas fa-phone"></i> Contato</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!--Menu desktop-->
+          <div class="menu">
+            <ul class="menu_texto">
+              <li><i class="fas fa-home"></i><a href="#">&nbspHome</a></li>
+              <li><i class="fas fa-horse"></i><a href="#">&nbspLeiloes</a></li>
+              <div class="dropdown">
+                <li>
+                  <i class="fas fa-key"></i><a href="#">&nbspLogin</a>
+                  <div class="dropdown-content">
+                    <form action="#">
+                      <label for="login"><b>Login</b></label>
+                      <input
+                        class="input_login"
+                        type="text"
+                        placeholder="Login"
+                        name="login"
+                        required
+                      />
+                      <label for="senha"><b>Senha</b></label>
+                      <input
+                        class="input_login"
+                        type="password"
+                        placeholder="Senha"
+                        name="senha"
+                        required
+                      />
+                      <button class="button_login" type="submit">Login</button>
+                    </form>
+                  </div>
+                </li>
+              </div>
+              <li><i class="fas fa-cogs"></i><a href="#">&nbspServicos</a></li>
+              <li><i class="fas fa-phone"></i><a href="#">&nbspContato</a></li>
+            </ul>
+          </div>
+          <!--Fim Menu desktop-->
+        </nav>
+      </div>
+
+      <div class="header_right"></div>
+    </header>
+
+    <main class="main">
+      <!--Secao busca-->
+      <section class="section-busca">
+        <div class="busca">
+          <form action="#">
+            <input type="text" class="input_search" name="busca" />
+            <button type="submit" class="button_search">
+              <i
+                class="fas fa-search fa-flip-horizontal fa-2x icon_search_color"
+              ></i>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!--Secao leiloes-->
+      <section class="section-leiloes">
+        <div class="leiloes">
+          <article class="article-leiloes">
+            <div class="img_leiloes">
+              <img
+                class="img"
+                src="img/haras01_croped.jpg"
+                alt="Imagem Fazenda do Leilão"
+              />
+            </div>
+            <div class="titulo_leiloes">
+              <h1>Leilão Fazenda Bom Sucesso</h1>
+              <hr />
+            </div>
+            <div class="data_descricao_leiloes">
+              <p><span class="sublinhado">Data</span>: 20/05/2019</p>
+              <p>
+                <span class="sublinhado">Descrição</span>: Leilão de cavalos da
+                raça tal e tal, bois, vacas e bezerros que ocorrerá na Fazenda
+                Bom Sucesso.
+              </p>
+            </div>
+            <div class="botoes">
+              <button class="button_ver_mais_participar" type="submit">
+                VER MAIS
+              </button>
+              <button class="button_ver_mais_participar" type="submit">
+                PARTICIPAR
+              </button>
+            </div>
+          </article>
+          <article class="article-leiloes">
+            <div class="img_leiloes">
+              <img
+                class="img"
+                src="img/haras02_croped.jpg"
+                alt="Imagem Fazenda do Leilão"
+              />
+            </div>
+            <div class="titulo_leiloes">
+              <h1>Leilão Haras Boa Esperança</h1>
+              <hr />
+            </div>
+            <div>
+              <p><span class="sublinhado">Data</span>: 10/06/2019</p>
+              <p>
+                <span class="sublinhado">Descrição</span>: Leilão de cavalos da
+                raça tal e tal, bois, vacas e bezerros que ocorrerá no Haras Boa
+                Esperança.
+              </p>
+            </div>
+            <div class="botoes">
+              <button class="button_ver_mais_participar" type="submit">
+                VER MAIS
+              </button>
+              <button class="button_ver_mais_participar" type="submit">
+                PARTICIPAR
+              </button>
+            </div>
+          </article>
+          <article class="article-leiloes">
+            <div class="img_leiloes">
+              <img
+                class="img"
+                src="img/haras03_croped.jpg"
+                alt="Imagem Fazenda do Leilão"
+              />
+            </div>
+            <div class="titulo_leiloes">
+              <h1>Leilão Fazenda Rancho Alto</h1>
+              <hr />
+            </div>
+            <div>
+              <p><span class="sublinhado">Data</span>: 18/07/2019</p>
+              <p>
+                <span class="sublinhado">Descrição</span>: Leilão de cavalos da
+                raça tal e tal, bois, vacas e bezerros que ocorrerá na Fazenda
+                Rancho Alto.
+              </p>
+            </div>
+            <div class="botoes">
+              <button class="button_ver_mais_participar" type="submit">
+                VER MAIS
+              </button>
+              <button class="button_ver_mais_participar" type="submit">
+                PARTICIPAR
+              </button>
+            </div>
+          </article>
+          <article class="article-leiloes">
+            <div class="img_leiloes">
+              <img
+                class="img"
+                src="img/haras01_croped.jpg"
+                alt="Imagem Fazenda do Leilão"
+              />
+            </div>
+            <div class="titulo_leiloes">
+              <h1>Leilão Fazenda Bom Sucesso</h1>
+              <hr />
+            </div>
+            <div>
+              <p><span class="sublinhado">Data</span>: 20/05/2019</p>
+              <p>
+                <span class="sublinhado">Descrição</span>: Leilão de cavalos da
+                raça tal e tal, bois, vacas e bezerros que ocorrerá na Fazenda
+                Bom Sucesso.
+              </p>
+            </div>
+            <div class="botoes">
+              <button class="button_ver_mais_participar" type="submit">
+                VER MAIS
+              </button>
+              <button class="button_ver_mais_participar" type="submit">
+                PARTICIPAR
+              </button>
+            </div>
+          </article>
+          <article class="article-leiloes">
+            <div class="img_leiloes">
+              <img
+                class="img"
+                src="img/haras02_croped.jpg"
+                alt="Imagem Fazenda do Leilão"
+              />
+            </div>
+            <div class="titulo_leiloes">
+              <h1>Leilão Haras Boa Esperança</h1>
+              <hr />
+            </div>
+            <div>
+              <p><span class="sublinhado">Data</span>: 10/06/2019</p>
+              <p>
+                <span class="sublinhado">Descrição</span>: Leilão de cavalos da
+                raça tal e tal, bois, vacas e bezerros que ocorrerá no Haras Boa
+                Esperança.
+              </p>
+            </div>
+            <div class="botoes">
+              <button class="button_ver_mais_participar" type="submit">
+                VER MAIS
+              </button>
+              <button class="button_ver_mais_participar" type="submit">
+                PARTICIPAR
+              </button>
+            </div>
+          </article>
+          <article class="article-leiloes">
+            <div class="img_leiloes">
+              <img
+                class="img"
+                src="img/haras03_croped.jpg"
+                alt="Imagem Fazenda do Leilão"
+              />
+            </div>
+            <div class="titulo_leiloes">
+              <h1>Leilão Fazenda Rancho Alto</h1>
+              <hr />
+            </div>
+            <div>
+              <p><span class="sublinhado">Data</span>: 18/07/2019</p>
+              <p>
+                <span class="sublinhado">Descrição</span>: Leilão de cavalos da
+                raça tal e tal, bois, vacas e bezerros que ocorrerá na Fazenda
+                Rancho Alto.
+              </p>
+            </div>
+            <div class="botoes">
+              <button class="button_ver_mais_participar" type="submit">
+                VER MAIS
+              </button>
+              <button class="button_ver_mais_participar" type="submit">
+                PARTICIPAR
+              </button>
+            </div>
+          </article>
+          <article class="article-leiloes">
+            <div class="img_leiloes">
+              <img
+                class="img"
+                src="img/haras01_croped.jpg"
+                alt="Imagem Fazenda do Leilão"
+              />
+            </div>
+            <div class="titulo_leiloes">
+              <h1>Leilão Fazenda Bom Sucesso</h1>
+              <hr />
+            </div>
+            <div>
+              <p><span class="sublinhado">Data</span>: 20/05/2019</p>
+              <p>
+                <span class="sublinhado">Descrição</span>: Leilão de cavalos da
+                raça tal e tal, bois, vacas e bezerros que ocorrerá na Fazenda
+                Bom Sucesso.
+              </p>
+            </div>
+            <div class="botoes">
+              <button class="button_ver_mais_participar" type="submit">
+                VER MAIS
+              </button>
+              <button class="button_ver_mais_participar" type="submit">
+                PARTICIPAR
+              </button>
+            </div>
+          </article>
+          <article class="article-leiloes">
+            <div class="img_leiloes">
+              <img
+                class="img"
+                src="img/haras02_croped.jpg"
+                alt="Imagem Fazenda do Leilão"
+              />
+            </div>
+            <div class="titulo_leiloes">
+              <h1>Leilão Haras Boa Esperança</h1>
+              <hr />
+            </div>
+            <div>
+              <p><span class="sublinhado">Data</span>: 10/06/2019</p>
+              <p>
+                <span class="sublinhado">Descrição</span>: Leilão de cavalos da
+                raça tal e tal, bois, vacas e bezerros que ocorrerá no Haras Boa
+                Esperança.
+              </p>
+            </div>
+            <div class="botoes">
+              <button class="button_ver_mais_participar" type="submit">
+                VER MAIS
+              </button>
+              <button class="button_ver_mais_participar" type="submit">
+                PARTICIPAR
+              </button>
+            </div>
+          </article>
+          <article class="article-leiloes">
+            <div class="img_leiloes">
+              <img
+                class="img"
+                src="img/haras03_croped.jpg"
+                alt="Imagem Fazenda do Leilão"
+              />
+            </div>
+            <div class="titulo_leiloes">
+              <h1>Leilão Fazenda Rancho Alto</h1>
+              <hr />
+            </div>
+            <div>
+              <p><span class="sublinhado">Data</span>: 18/07/2019</p>
+              <p>
+                <span class="sublinhado">Descrição</span>: Leilão de cavalos da
+                raça tal e tal, bois, vacas e bezerros que ocorrerá na Fazenda
+                Rancho Alto.
+              </p>
+            </div>
+            <div class="botoes">
+              <button class="button_ver_mais_participar" type="submit">
+                VER MAIS
+              </button>
+              <button class="button_ver_mais_participar" type="submit">
+                PARTICIPAR
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!--Fim Secao leiloes-->
+    </main>
+
+    <footer class="footer">
+      <div class="footer_div">
+        <div class="footer_left">
+          <p><span class="negrito">SOBRE NÓS</span></p>
+          <p>
+            O Haras Web é uma empresa especializada na realização e na
+            organização de leilões online voltados ao mercado agropecuário.
+          </p>
+        </div>
+        <div class="footer_right">
+          <span class="negrito">LINKS</span>
+          <br />> Home&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp>
+          Serviços&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp> Ajuda <br />>
+          Leilões&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp> Contato
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

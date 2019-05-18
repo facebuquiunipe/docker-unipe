@@ -1,0 +1,66 @@
+//estilo menu celular/tablet
+//menu sanduiche
+.icon_menu_sandwich {
+  display: none;
+  background: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 2px;
+  margin-bottom: 55%;
+  cursor: pointer;
+  font-size: 38px;
+}
+
+.dropdown-mobile {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content-mobile {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  //padding: 12px 16px;
+  z-index: 1;
+  transform: translate(-60%, -15%);
+  //p:nth-child(n) {border-bottom: 1px solid rgb(206, 205, 205);} //adiciona linhas em todos elementos filho do tipo "p"
+  //p:last-child {border: 0px;} //remove a linha do ultimo elemento filho do tipo "p"
+
+  ul {
+    font-size: 14px;
+    list-style: none;
+    padding: 0px;
+    li:nth-child(n) {
+      border-top: 1px solid #b6b6b6; //poe a borda superior em todos os elementos li da lista ul
+      border-bottom: 1px solid #a0a0a0; //poe a borda inferior em todos os elementos li da lista ul
+    }
+    li:first-child {
+      border-top: 0px; //tira a borda superior do primeiro elemento li da lista ul
+    }
+    li:last-child {
+      border-bottom: 0px; //tira a borda inferior do ultimo elemento li da lista ul
+    }
+  }
+
+  a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  a:hover {
+    background-color: #f1f1f1;
+  }
+}
+
+/*.dropdown-mobile:hover .dropdown-content-mobile {
+    display: block;
+    transform: translate(-55%, -20%);
+  }*/
+
+.menu-active {
+  display: block;
+}
