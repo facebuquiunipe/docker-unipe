@@ -1,8 +1,9 @@
 **Projeto Final**
 ---
-Imagem docker para configuração de ambiente Ubuntu com servidor apache rodando uma webapp de um Haras.
+Imagem docker para configuração de ambiente Ubuntu com servidor apache rodando uma webapp de um Haras. <br>
+ 
 
-**Para usar a imagem docker**
+**Para usar a imagem docker**<br><br>
 ---
 1.Baixar a imagem docker no Docker Hub
    $ docker pull facebuqui/projetofinal:1.0.0
