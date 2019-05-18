@@ -1,32 +1,27 @@
-**Projeto Haras - Disciplina Design Responsivo**
+**Projeto Final**
 ---
-Fiz um design responsivo de um webapp de leilão de Haras/Fazendas, que provavelmente será usado numa disciplina do mestrado.
+Imagem docker para configuração de ambiente Ubuntu com servidor apache rodando uma webapp de um Haras.
 
-**Estrutura da pasta** <br>
-/css - arquivos css <br>
-/img - imagens, inclusive os protótipos de tela desktop e mobile (layout-desktop.png e layout-mobile.png) <br>
-/js - javascript utilizado no menu versão mobile <br>
-/scss - arquivos scss <br>
-index.html - arquivo principal do projeto <br>
-
-**Estrutura HTML 5** <br>
-Utilizei as tags padrões do html 5 para estruturar o arquivo html: `<header> <nav> <main> <section> <article> <footer>` <br>
-
-**Breakpoints responsivos** <br>
-Criei 5 breakpoints: os 4 padroes (acima de 1200px, entre 1200 e 768, entre 768 e 576, entre que 576 e 480) e 1 breakpoint a parte (menor que 480px) pois achei necessário para minha aplicação se adaptar melhor a resoluções menores de celular. <br>
-
-Os breakpoints ficaram assim: <br>
-
-- maior que 1200px (desktop grandes) <br>
-- entre 1200px e 768px (desktop) <br>
-- entre 768px e 576px (tablet) <br>
-- entre 576px e 480px (celular) <br>
-- menor que 480px (celular) - achei necessário criar esse para de adaptar melhor à resoluções menores de celular <br>
-
-**Css e outros** <br>
-Dividi em 2 arquivos css: um geral para toda a pagina e outro só para o menu versão mobile.
-Utilizei a biblioteca css Font Awesome. <br>
-
-**Navegadores** <br>
-Testei mais no Chrome. <br>
-
+**Para usar a imagem docker**
+---
+1.Baixar a imagem docker no Docker Hub
+   $ docker pull facebuqui/projetofinal:1.0.0
+2.Gerar o container
+   $ docker run -d -p 8080:80 --name=facebuqui facebuqui/projetofinal:1.0.0
+3.Testar a webapp do Haras. Lembrar de mudar o localhost pelo IP se o servidor for remoto.
+   http://localhost:8080/projetoFinal
+   
+**Projeto criar uma imagem docker personalizada**
+---
+1.Baixar os arquivos de configuração no git
+   $ git clone https://github.com/facebuquiunipe/docker-unipe.git
+2.Entrar no diretório docker-unipe
+   $ cd docker-unipe
+3.Editar o arquivo Dockerfile dentro da pasta docker-unipe de acordo com suas preferências
+   $ vi Dockerfile
+4.Gerar a imagem personalizada. Lembrar que a pasta projetoFinal deve estar no mesmo nível do arquivo Dockfile
+   $ docker build -t facebuqui/projetofinal:1.0.0 .
+5.Gerar o container
+   $ docker run -d -p 8080:80 --name=facebuqui facebuqui/projetofinal:1.0.0
+6.Testar a webapp do Haras. Lembrar de mudar o localhost pelo IP se o servidor for remoto.
+   http://localhost:8080/projetoFinal
