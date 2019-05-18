@@ -3,7 +3,7 @@
 Imagem docker para configuração de ambiente Ubuntu com servidor apache rodando uma webapp de um Haras. <br>
  
 
-**Para usar a imagem docker**<br><br>
+**Para usar a imagem docker**
 ---
 1.Baixar a imagem docker no Docker Hub
    $ docker pull facebuqui/projetofinal:1.0.0
