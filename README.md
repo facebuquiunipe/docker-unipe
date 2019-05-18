@@ -1,4 +1,4 @@
-**Projeto Final**
+Projeto Final
 ---
 Imagem docker para configuração de ambiente Ubuntu com servidor apache rodando uma webapp de um Haras. <br>
  
